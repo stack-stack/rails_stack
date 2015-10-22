@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get 'answers/show'
 
+  get 'answers/index'
+
   get 'answers/update'
 
   get 'answers/destroy'
@@ -11,6 +13,8 @@ Rails.application.routes.draw do
 
   get 'questions/show'
 
+  get 'questions/index'
+
   get 'questions/update'
 
   get 'questions/destroy'
@@ -18,6 +22,8 @@ Rails.application.routes.draw do
   get 'members/create'
 
   get 'members/show'
+
+  get 'members/index'
 
   get 'members/update'
 

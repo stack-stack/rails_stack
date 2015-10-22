@@ -1,4 +1,32 @@
 Rails.application.routes.draw do
+  get 'answers/create'
+
+  get 'answers/show'
+
+  get 'answers/update'
+
+  get 'answers/destroy'
+
+  get 'questions/create'
+
+  get 'questions/show'
+
+  get 'questions/update'
+
+  get 'questions/destroy'
+
+  get 'members/create'
+
+  get 'members/show'
+
+  get 'members/update'
+
+  get 'members/destroy'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

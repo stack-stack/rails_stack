@@ -1,1 +1,13 @@
 # Tasks
+
+Add index view as html
+Render index view as json
+
+
+
+
+
+....questions
+  before_action check_if_logged_in # still see show....can't create, destroy, etc.
+.....answers
+  before_action, etc.

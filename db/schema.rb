@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(version: 20151022184545) do
     t.integer  "question_id"
     t.text     "answer_body"
     t.integer  "answer_votes"
-    t.boolean  "accepted"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.boolean  "accepted",     default: false, null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
   end
 
   create_table "members", force: :cascade do |t|

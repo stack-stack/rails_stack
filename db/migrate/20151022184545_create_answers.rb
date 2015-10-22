@@ -5,7 +5,7 @@ class CreateAnswers < ActiveRecord::Migration
       t.integer :question_id
       t.text :answer_body
       t.integer :answer_votes
-      t.boolean :accepted
+      t.boolean :accepted, default: false, null: false
 
       t.timestamps null: false
     end

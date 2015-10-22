@@ -6,6 +6,7 @@ class MembersController < ApplicationController
   end
 
   def index
+    @members = Member.all
   end
 
   def update

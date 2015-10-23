@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151022184545) do
+ActiveRecord::Schema.define(version: 20151023134847) do
 
   create_table "answers", force: :cascade do |t|
     t.integer  "member_id"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20151022184545) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "token"
   end
 
   create_table "questions", force: :cascade do |t|

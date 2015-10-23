@@ -8,6 +8,7 @@
 member1 = Member.create!(username: "member1", password: "password")
 member2 = Member.create!(username: "member2", password: "password")
 member3 = Member.create!(username: "member3", password: "password")
+member3.update(profile_image) = Faker::Avatar.image(member3.id)
 
 question1 = Question.create!(member_id: 1, title: "Question 1", question_body: "This is a question?", question_votes: 3)
 question2 = Question.create!(member_id: 1, title: "Question 2", question_body: "This is another question?", question_votes: 2)

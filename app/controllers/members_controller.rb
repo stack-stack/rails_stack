@@ -1,5 +1,9 @@
 class MembersController < ApplicationController
   def create
+    @member = Member.new(member_params)
+    if @member.save
+      redirect_to sessions_create_path
+    end
   end
 
   def show
@@ -10,8 +14,16 @@ class MembersController < ApplicationController
   end
 
   def update
+    @member.update(member_params)
   end
 
   def destroy
   end
+
+  private
+
+  def member_params
+    params.require(:member).permit(:username, :password, :profile_image)
+  end
+
 end

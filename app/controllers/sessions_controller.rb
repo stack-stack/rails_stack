@@ -10,14 +10,6 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    #set token to nil
+    @member.token = nil
   end
 end
-
-
-login with username, password
-request to rails
-rails gives token as json
-javascript keeps token in memory
-javascript requests view of all questions, etc.
-rails gives list of ?? as json

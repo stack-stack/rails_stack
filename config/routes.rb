@@ -21,7 +21,7 @@ Rails.application.routes.draw do
 
   get 'members/create'
 
-  get 'members/show'
+  get 'members/show/:id' => 'members#show'
 
   get 'members/index'
 

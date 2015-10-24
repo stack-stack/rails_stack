@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   get 'questions/create'
 
-  get 'questions/show'
+  get 'questions/show/:id' => 'questions#show'
 
   get 'questions/index'
 

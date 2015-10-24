@@ -18,3 +18,4 @@ question3 = Question.create!(member_id: 2, title: "Question 3", question_body: "
 
 answer1 = Answer.create!(member_id: 2, question_id: 1, answer_body: "Answer goes here.", answer_votes: 15, accepted: true)
 answer2 = Answer.create!(member_id: 3, question_id: 1, answer_body: "Answer goes here.", answer_votes: 4, accepted: false)
+answer2 = Answer.create!(member_id: 1, question_id: 2, answer_body: "Answer answer.", answer_votes: 10, accepted: false)

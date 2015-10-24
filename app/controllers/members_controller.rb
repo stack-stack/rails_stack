@@ -19,6 +19,7 @@ class MembersController < ApplicationController
   end
 
   def destroy
+    @member.destroy
   end
 
   private

@@ -1,4 +1,6 @@
 class MembersController < ApplicationController
+  #before_action :check_token, only: [:show, :update, :destroy]
+
   def create
     @member = Member.new(member_params)
     if @member.save

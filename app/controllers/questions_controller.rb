@@ -1,4 +1,6 @@
 class QuestionsController < ApplicationController
+  #before_action :check_token, only: [:create, :update, :destroy]
+
   def create
     @question = Question.new(question_params)
     if @question.save

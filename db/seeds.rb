@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 50.times do |x|
-  Member.create!(username: Faker::Lorem.word, password: "password", profile_image: Faker::Avatar.image)
+  Member.create!(username: ("member" + "#{x+1}"), password: "password", profile_image: Faker::Avatar.image)
 end
 
 100.times do |x|

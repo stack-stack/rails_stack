@@ -4,4 +4,5 @@ json.array! @members do |m|
   json.username m.username
   json.password m.password_digest
   json.questions m.questions
+  json.created_at m.created_at
 end

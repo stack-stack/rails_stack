@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
   get 'questions/destroy'
 
-  get 'members/create'
+  post 'members/create'
 
   get 'members/show/:id' => 'members#show'
 

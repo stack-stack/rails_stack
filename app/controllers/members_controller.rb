@@ -1,10 +1,11 @@
 class MembersController < ApplicationController
   #before_action :check_token, only: [:show, :update, :destroy]
+  skip_before_filter  :verify_authenticity_token
 
   def create
     @member = Member.new(member_params)
     if @member.save
-      redirect_to sessions_create_path
+      render json: @member
     end
   end
 

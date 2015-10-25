@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'answers/create'
+  post 'answers/create'
 
   get 'answers/show/:id' => 'answers#show'
 

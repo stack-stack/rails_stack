@@ -1,10 +1,11 @@
 class AnswersController < ApplicationController
   #before_action :check_token, only: [:create, :update, :destroy]
+  skip_before_filter  :verify_authenticity_token
 
   def create
     @answer = Answer.new(answer_params)
     if @answer.save
-      redirect_to show_path
+      render json: @answer
     else
       render json: "Answer not saved...try again."
     end

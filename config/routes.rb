@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get 'answers/destroy'
 
-  get 'questions/create'
+  post 'questions/create'
 
   get 'questions/show/:id' => 'questions#show'
 

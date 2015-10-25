@@ -1,10 +1,11 @@
 class QuestionsController < ApplicationController
   #before_action :check_token, only: [:create, :update, :destroy]
+  skip_before_filter  :verify_authenticity_token
 
   def create
     @question = Question.new(question_params)
     if @question.save
-      redirect_to show_path
+      render json: @question
     else
       render json: "Question not saved...try again."
     end

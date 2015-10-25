@@ -13,5 +13,5 @@ class Question < ActiveRecord::Base
     @question.question_votes -= 1
     @question.question_votes.save
   end
-  
+
 end

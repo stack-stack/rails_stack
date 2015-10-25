@@ -29,7 +29,7 @@ Rails.application.routes.draw do
 
   get 'members/destroy'
 
-  get 'sessions/create'
+  post 'sessions/create'
 
   get 'sessions/destroy'
 

@@ -7,7 +7,7 @@ class AnswersController < ApplicationController
     if @answer.save
       render json: @answer
     else
-      render json: "Answer not saved...try again."
+      render json: {error: "Answer not saved...try again."}
     end
   end
 

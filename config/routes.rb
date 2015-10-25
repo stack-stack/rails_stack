@@ -5,9 +5,9 @@ Rails.application.routes.draw do
 
   get 'answers/index'
 
-  get 'answers/update'
+  patch 'answers/update'
 
-  get 'answers/destroy'
+  delete 'answers/destroy'
 
   post 'questions/create'
 
@@ -15,9 +15,9 @@ Rails.application.routes.draw do
 
   get 'questions/index'
 
-  get 'questions/update'
+  patch 'questions/update'
 
-  get 'questions/destroy'
+  delete 'questions/destroy'
 
   post 'members/create'
 
@@ -25,13 +25,13 @@ Rails.application.routes.draw do
 
   get 'members/index'
 
-  get 'members/update'
+  patch 'members/update'
 
-  get 'members/destroy'
+  delete 'members/destroy'
 
   post 'sessions/create'
 
-  get 'sessions/destroy'
+  delete 'sessions/destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

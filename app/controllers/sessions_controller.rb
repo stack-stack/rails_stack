@@ -2,20 +2,25 @@ class SessionsController < ApplicationController
   skip_before_filter  :verify_authenticity_token
 
   def create
-    @member = Member.find_by(params[:username])
-    if @member.save
-      render json: @member
-    # if @member && @member.authenticate(params[:password])
-    #   byebug
-    #   @member.token = SecureRandom.hex
-    #   @member.save
-    #   render json: @member
+    if params[:member]
+      member = Member.find_by(username: params[:member][:username])
+      if member
+        if member.authenticate(params[:member][:password])
+          member.token = SecureRandom.hex
+          member.save
+          render json: member
+        else
+          render json: {error: "Incorrect login credentials. Please try again."}
+        end
+      else
+        render json: {error: "That user could not be found."}
+      end
     else
-      render json: "Incorrect login credentials. Please try again."
+      render json: {error: "you dun messsed up. Bad params."}
     end
   end
 
   def destroy
-    @member.token = nil
+    member.token = nil
   end
 end
